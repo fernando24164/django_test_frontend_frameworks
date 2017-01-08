@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  </head>
+  <body>
+    <h1>Testing</h1>
+    <img src="{% static  "images/Trump.jpg"%}" alt="">
+    <div ng-app ng-init="firstName = 'John'; lastName = 'Doe';">
+      <strong>First name:</strong> {{firstName}}<br />
+      <strong>Last name:</strong> <span ng-bind="lastName"></span>
+    </div>
+  </body>
+</html>
