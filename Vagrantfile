@@ -20,7 +20,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-8.5_chef-provisionerless.box"
 
   config.vm.synced_folder ".", "/vagrant", type: "rsync", rsync_exclude: ".git"
-  config.vm.hostname = "djangular_test"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 1024
