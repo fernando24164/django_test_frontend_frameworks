@@ -1,20 +1,41 @@
-<!DOCTYPE html>
-
-{% load staticfiles %}
+<!DOCTYPE html> {% load staticfiles %}
 
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Test</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script type="text/javascript" src="{% static "js/app.js" %}"></script>
-  </head>
-  <body>
-    <h1>Testing</h1>
-    <img src="{% static  "images/Trump.jpg"%}" alt="">
-    <div ng-app ng-init="firstName = 'John'; lastName = 'Doe';">
-      <strong>First name:</strong> {{firstName}}<br />
-      <strong>Last name:</strong> <span ng-bind="lastName"></span>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Places View</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="#">Places</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="col-lg-12" style="border-style: solid;border-width:0.5px;border-color: #c7c4b9">
+          <img src="{% static  " images/Trump.jpg "%}" alt="Image">
+          <div ng-app ng-init="firstName = 'John'; lastName = 'Doe';">
+            <strong>First name:</strong> {{firstName}}<br />
+            <strong>Last name:</strong> <span ng-bind="lastName"></span>
+          </div>
+        </div>
     </div>
-  </body>
+</body>
+<script
+			  src="http://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script type="text/javascript" src="{% static " js/app.js " %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>
