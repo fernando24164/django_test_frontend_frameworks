@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^api/', include('restapi.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^index.html/$', PlacesViewIndex.as_view(), name="place_index"),
+    url(r'^', PlacesViewIndex.as_view(), name="place_index"),
 ]
