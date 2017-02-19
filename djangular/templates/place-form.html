@@ -10,11 +10,14 @@
 
 </head>
 
-<body>
+<body style="max-width:1140px;display:block;margin: 0 auto;">
     {% include "navigation.html" %}
-    <form class="form-group" action="{{ request.get_full_path }}" method="post" id="form" role="form">
+    <form style="max-width:350px;display:block;margin:0 auto;" class="form-group" action="{{ request.get_full_path }}" method="post" id="form" role="form">
         {% csrf_token %}
         {{ form.as_p }}
+        <div class="form-group row">
+          <button style="display: block;margin: 0 auto;" type="submit" class="btn btn-primary">Add</button>
+        </div>
     </form>
 </body>
 
