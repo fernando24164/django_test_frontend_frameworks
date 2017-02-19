@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 
-<html>
-{% load static %}
+{% load staticfiles %}
 
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-    			  src="http://code.jquery.com/jquery-3.1.1.min.js"
-    			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    			  crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script type="text/javascript" src="{% static "js/app.js" %}"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    {% include "header.html" %}
     <title>Index</title>
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/index.html">Places View</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/index.html">Home</a></li>
-                    <li><a href="/index.html">Places</a></li>
-                </ul>
-            </div>
-        </nav>
+        {% include "navigation.html" %}
         {% verbatim %}
         <div class="col-lg-12" style="border-style: solid;border-width:0.5px;border-color: #c7c4b9">
           <div ng-app="restapi.app" ng-controller="AppController">

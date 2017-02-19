@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+<head>
+    {% include "header.html" %}
+    <title>Place form</title>
+
+</head>
+
+<body>
+    {% include "navigation.html" %}
+    <form class="form-group" action="{{ request.get_full_path }}" method="post" id="form" role="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+    </form>
+</body>
+
+</html>
