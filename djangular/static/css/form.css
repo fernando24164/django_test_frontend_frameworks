@@ -1,0 +1,16 @@
+body {
+    max-width: 1140px;
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+#add-button {
+    display: block;
+    margin: 0 auto;
+}
